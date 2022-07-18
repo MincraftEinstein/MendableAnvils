@@ -1,6 +1,6 @@
-package com.example.examplemod.mixin;
+package einstein.mendable_anvils.mixin;
 
-import com.example.examplemod.Constants;
+import einstein.mendable_anvils.Constants;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;

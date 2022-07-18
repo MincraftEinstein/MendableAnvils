@@ -1,4 +1,4 @@
-package com.example.examplemod.platform.services;
+package einstein.mendable_anvils.platform.services;
 
 public interface IPlatformHelper {
 

@@ -1,39 +1,34 @@
 {
-    "schemaVersion": 1,
-    "id": "modid",
-    "version": "${version}",
-  
-    "name": "Example Mod",
-    "description": "This is an example description! Tell everyone what your mod is about!",
-    "authors": [
-      "Me!"
-    ],
-    "contact": {
-      "homepage": "https://fabricmc.net/",
-      "sources": "https://github.com/FabricMC/fabric-example-mod"
-    },
-  
-    "license": "CC0-1.0",
-    "icon": "assets/modid/icon.png",
-  
-    "environment": "*",
-    "entrypoints": {
-      "main": [
-        "com.example.examplemod.ExampleMod"
-      ]
-    },
-    "mixins": [
-      "modid.mixins.json"
-    ],
-  
-    "depends": {
-      "fabricloader": ">=0.14",
-      "fabric": "*",
-      "minecraft": "1.19.x",
-      "java": ">=17"
-    },
-    "suggests": {
-      "another-mod": "*"
-    }
+  "schemaVersion": 1,
+  "id": "mendable_anvils",
+  "version": "${version}",
+  "name": "Example Mod",
+  "description": "A simple mod that allows a player to fix their anvils by shift + right-clicking an anvil with an iron ingot",
+  "authors": [
+    "MincraftEinstein"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/mendable-anvils-fabric",
+    "sources": "https://github.com/MincraftEinstein/MendableAnvils"
+  },
+  "license": "All rights reserved",
+  "icon": "assets/mendable_anvils/logo.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "einstein.mendable_anvils.MendableAnvils"
+    ]
+  },
+  "mixins": [
+    "mendable_anvils.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14",
+    "fabric": "*",
+    "minecraft": "1.19.x",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
   }
-  
+}

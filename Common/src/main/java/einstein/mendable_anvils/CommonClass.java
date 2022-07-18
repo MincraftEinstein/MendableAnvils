@@ -1,6 +1,6 @@
-package com.example.examplemod;
+package einstein.mendable_anvils;
 
-import com.example.examplemod.platform.Services;
+import einstein.mendable_anvils.platform.Services;
 import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;

@@ -1,9 +1,9 @@
-package com.example.examplemod;
+package einstein.mendable_anvils;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 
-public class ExampleMod implements ModInitializer {
+public class MendableAnvils implements ModInitializer {
     
     @Override
     public void onInitialize() {

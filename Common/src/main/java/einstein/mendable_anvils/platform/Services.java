@@ -1,7 +1,7 @@
-package com.example.examplemod.platform;
+package einstein.mendable_anvils.platform;
 
-import com.example.examplemod.Constants;
-import com.example.examplemod.platform.services.IPlatformHelper;
+import einstein.mendable_anvils.Constants;
+import einstein.mendable_anvils.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
 
