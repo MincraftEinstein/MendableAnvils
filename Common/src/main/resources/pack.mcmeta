@@ -1,6 +1,6 @@
 {
     "pack": {
-        "description": "${mod_name}",
-        "pack_format": 8
+        "description": "Mendable Anvils resources",
+        "pack_format": 9
     }
 }
