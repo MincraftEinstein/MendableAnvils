@@ -14,6 +14,8 @@ A simple mod that allows players to fix (mend) their anvils by shift + right-cli
 
 Repository created from [MultiLoader-Template](https://github.com/jaredlll08/MultiLoader-Template/tree/1.19)
 
+[Fabric API](https://modrinth.com/mod/fabric-api "Fabric API") required
+
 <br>
 <details>
 <summary><b>📜 PLEASE READ</b></summary>
