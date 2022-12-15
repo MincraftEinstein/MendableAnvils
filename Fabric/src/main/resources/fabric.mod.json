@@ -12,7 +12,7 @@
     "sources": "https://github.com/MincraftEinstein/MendableAnvils",
     "issues": "https://github.com/MincraftEinstein/MendableAnvils/issues"
   },
-  "license": "All Rights Reserved",
+  "license": "All rights reserved",
   "icon": "pack.png",
   "environment": "*",
   "entrypoints": {

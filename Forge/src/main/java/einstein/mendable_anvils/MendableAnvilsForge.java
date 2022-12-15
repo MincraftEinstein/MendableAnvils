@@ -4,7 +4,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod(MendableAnvilsCommon.MODID)
+@Mod(MendableAnvilsCommon.MOD_ID)
 public class MendableAnvilsForge {
     
     public MendableAnvilsForge() {

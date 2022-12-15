@@ -24,7 +24,7 @@ import java.util.Map;
 
 public class MendableAnvilsCommon {
 
-    public static final String MODID = "mendable_anvils";
+    public static final String MOD_ID = "mendable_anvils";
     public static final Logger LOGGER = LogManager.getLogger();
 
     private static final Map<Block, Block> MEND_STAGES = Map.ofEntries(Map.entry(Blocks.CHIPPED_ANVIL, Blocks.ANVIL), Map.entry(Blocks.DAMAGED_ANVIL, Blocks.CHIPPED_ANVIL));

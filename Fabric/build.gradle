@@ -20,12 +20,13 @@ repositories {
 dependencies {
     minecraft "com.mojang:minecraft:${mc_v}"
     mappings loom.officialMojangMappings()
-    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_v}"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_v}"
+
+    modImplementation "net.fabricmc:fabric-loader:${fabric_v}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_v}+${mc_v}"
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     implementation project(":Common")
 
-    modImplementation "curse.maven:modmenu-308702:3873988"
+    modImplementation "curse.maven:modmenu-308702:${modmenu_v}"
 }
 
 loom {
@@ -45,13 +46,12 @@ loom {
     }
 }
 
-
 processResources {
     from project(":Common").sourceSets.main.resources
-    inputs.property "version", project.version
+    inputs.property "version", "${mod_v}"
 
     filesMatching("fabric.mod.json") {
-        expand "version": project.version
+        expand "version": "${mod_v}"
     }
 }
 
