@@ -1,14 +1,14 @@
-package einstein.mendable_anvils.loader;
+package einstein.mendable_anvils.platform;
 
-import einstein.mendable_anvils.loader.services.LoaderHelper;
+import einstein.mendable_anvils.platform.services.IPlatformHelper;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
 
-public class ForgeLoaderHelper implements LoaderHelper {
+public class ForgePlatformHelper implements IPlatformHelper {
 
     @Override
-    public ModLoaderType getModLoader() {
-        return ModLoaderType.FORGE;
+    public String getPlatformName() {
+        return "Forge";
     }
 
     @Override

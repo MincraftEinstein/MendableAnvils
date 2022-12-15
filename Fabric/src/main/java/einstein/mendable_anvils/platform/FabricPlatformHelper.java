@@ -1,13 +1,13 @@
-package einstein.mendable_anvils.loader;
+package einstein.mendable_anvils.platform;
 
-import einstein.mendable_anvils.loader.services.LoaderHelper;
+import einstein.mendable_anvils.platform.services.IPlatformHelper;
 import net.fabricmc.loader.api.FabricLoader;
 
-public class FabricLoaderHelper implements LoaderHelper {
+public class FabricPlatformHelper implements IPlatformHelper {
 
     @Override
-    public ModLoaderType getModLoader() {
-        return ModLoaderType.FABRIC;
+    public String getPlatformName() {
+        return "Fabric";
     }
 
     @Override

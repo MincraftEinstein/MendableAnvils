@@ -1,6 +1,6 @@
 package einstein.mendable_anvils;
 
-import einstein.mendable_anvils.loader.Services;
+import einstein.mendable_anvils.platform.Services;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -43,7 +43,7 @@ public class MendableAnvilsCommon {
                     stack.shrink(1);
                 }
 
-                if (Services.LOADER.getModLoader().isForge()) {
+                if (Services.PLATFORM.getPlatformName().equals("Forge")) {
                     player.swing(hand, true);
                 }
 
