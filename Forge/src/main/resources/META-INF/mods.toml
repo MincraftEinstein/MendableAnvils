@@ -30,6 +30,6 @@ A mod that allows players to fix their anvils by shift + right-clicking an anvil
 [[dependencies.mendable_anvils]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19, 1.20)"
+    versionRange="[1.20, 1.21)"
     ordering="NONE"
     side="BOTH"

@@ -10,10 +10,7 @@ archivesBaseName = "${mod_name}-fabric-${mc_v}"
 
 repositories {
     maven {
-        url "https://cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
+        url = "https://maven.terraformersmc.com/releases/"
     }
 }
 
@@ -26,7 +23,7 @@ dependencies {
     implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
     implementation project(":Common")
 
-    modImplementation "curse.maven:modmenu-308702:${modmenu_v}"
+    modImplementation "com.terraformersmc:modmenu:${modmenu_v}"
 }
 
 loom {
