@@ -1,7 +1,7 @@
 package einstein.mendable_anvils;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.BlockSource;
+import net.minecraft.core.dispenser.BlockSource;
 import net.minecraft.core.dispenser.OptionalDispenseItemBehavior;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -13,9 +13,9 @@ public class MendAnvilDispenseItemBehavior extends OptionalDispenseItemBehavior 
 
     @Override
     protected ItemStack execute(BlockSource source, ItemStack stack) {
-        ServerLevel level = source.getLevel();
+        ServerLevel level = source.level();
         if (!level.isClientSide) {
-            BlockPos pos = source.getPos().relative(source.getBlockState().getValue(DispenserBlock.FACING));
+            BlockPos pos = source.pos().relative(source.state().getValue(DispenserBlock.FACING));
             setSuccess(MendableAnvilsCommon.mendAnvil(level, pos));
             if (isSuccess()) {
                 stack.shrink(1);

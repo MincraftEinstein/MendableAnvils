@@ -37,7 +37,7 @@ public class MendableAnvilsCommon {
         ItemStack stack = player.getItemInHand(hand);
         BlockPos pos = result.getBlockPos();
 
-        if (stack.getItem() == Items.IRON_INGOT && player.isShiftKeyDown()) {
+        if (stack.is(Items.IRON_INGOT) && player.isShiftKeyDown()) {
             if (mendAnvil(level, pos)) {
                 if (!player.isCreative()) {
                     stack.shrink(1);
