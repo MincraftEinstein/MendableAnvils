@@ -27,7 +27,10 @@ public class MendableAnvilsCommon {
     public static final String MOD_ID = "mendable_anvils";
     public static final Logger LOGGER = LogManager.getLogger();
 
-    private static final Map<Block, Block> MEND_STAGES = Map.ofEntries(Map.entry(Blocks.CHIPPED_ANVIL, Blocks.ANVIL), Map.entry(Blocks.DAMAGED_ANVIL, Blocks.CHIPPED_ANVIL));
+    private static final Map<Block, Block> MEND_STAGES = Map.of(
+            Blocks.CHIPPED_ANVIL, Blocks.ANVIL,
+            Blocks.DAMAGED_ANVIL, Blocks.CHIPPED_ANVIL
+    );
 
     public static void init() {
         DispenserBlock.registerBehavior(Items.IRON_INGOT, new MendAnvilDispenseItemBehavior());
@@ -47,12 +50,7 @@ public class MendableAnvilsCommon {
                     player.swing(hand, true);
                 }
 
-                if (level instanceof ServerLevel) {
-                    if (!level.isClientSide) {
-                        level.playSound(null, pos, SoundEvents.ANVIL_LAND, SoundSource.BLOCKS, 1, 1);
-                    }
-                }
-
+                level.playSound(null, pos, SoundEvents.ANVIL_LAND, SoundSource.BLOCKS, 1, 1);
                 return InteractionResult.SUCCESS;
             }
         }
@@ -63,7 +61,7 @@ public class MendableAnvilsCommon {
         BlockState state = level.getBlockState(pos);
         Block block = state.getBlock();
         if (MEND_STAGES.containsKey(block)) {
-            level.setBlock(pos, MEND_STAGES.get(block).defaultBlockState().setValue(AnvilBlock.FACING, state.getValue(AnvilBlock.FACING)), 2);
+            level.setBlockAndUpdate(pos, MEND_STAGES.get(block).defaultBlockState().setValue(AnvilBlock.FACING, state.getValue(AnvilBlock.FACING)));
             return true;
         }
         return false;
