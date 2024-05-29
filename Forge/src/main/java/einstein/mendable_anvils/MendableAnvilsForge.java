@@ -6,17 +6,14 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.server.ServerStartedEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod(MendableAnvilsCommon.MOD_ID)
+@Mod(MendableAnvils.MOD_ID)
 public class MendableAnvilsForge {
-    
-    public MendableAnvilsForge() {
-        MendableAnvilsCommon.init();
-        MinecraftForge.EVENT_BUS.addListener(this::onBlockClick);
-        MinecraftForge.EVENT_BUS.addListener((ServerStartedEvent event) -> MendableAnvilsCommon.onDatapackSync());
-        MinecraftForge.EVENT_BUS.addListener((OnDatapackSyncEvent event) -> MendableAnvilsCommon.onDatapackSync());
-    }
 
-    private void onBlockClick(PlayerInteractEvent.RightClickBlock event) {
-        MendableAnvilsCommon.onBlockClick(event.getEntity(), event.getLevel(), event.getHand(), event.getHitVec());
+    public MendableAnvilsForge() {
+        MendableAnvils.init();
+        MinecraftForge.EVENT_BUS.addListener((PlayerInteractEvent.RightClickBlock event) ->
+                MendableAnvils.onBlockClick(event.getEntity(), event.getLevel(), event.getHand(), event.getHitVec()));
+        MinecraftForge.EVENT_BUS.addListener((ServerStartedEvent event) -> MendableAnvils.onDatapackSync());
+        MinecraftForge.EVENT_BUS.addListener((OnDatapackSyncEvent event) -> MendableAnvils.onDatapackSync());
     }
 }

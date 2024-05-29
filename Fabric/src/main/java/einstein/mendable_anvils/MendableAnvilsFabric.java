@@ -8,9 +8,9 @@ public class MendableAnvilsFabric implements ModInitializer {
     
     @Override
     public void onInitialize() {
-        MendableAnvilsCommon.init();
-        UseBlockCallback.EVENT.register(MendableAnvilsCommon::onBlockClick);
-        ServerLifecycleEvents.SERVER_STARTED.register(server -> MendableAnvilsCommon.onDatapackSync());
-        ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resourceManager, success) -> MendableAnvilsCommon.onDatapackSync());
+        MendableAnvils.init();
+        UseBlockCallback.EVENT.register(MendableAnvils::onBlockClick);
+        ServerLifecycleEvents.SERVER_STARTED.register(server -> MendableAnvils.onDatapackSync());
+        ServerLifecycleEvents.END_DATA_PACK_RELOAD.register((server, resourceManager, success) -> MendableAnvils.onDatapackSync());
     }
 }

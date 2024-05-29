@@ -26,7 +26,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.Map;
 
-public class MendableAnvilsCommon {
+public class MendableAnvils {
 
     public static final String MOD_ID = "mendable_anvils";
     public static final Logger LOGGER = LogManager.getLogger();
@@ -57,9 +57,9 @@ public class MendableAnvilsCommon {
         });
     }
 
-    public static InteractionResult onBlockClick(Player player, Level level, InteractionHand hand, BlockHitResult result) {
+    public static InteractionResult onBlockClick(Player player, Level level, InteractionHand hand, BlockHitResult hitResult) {
         ItemStack stack = player.getItemInHand(hand);
-        BlockPos pos = result.getBlockPos();
+        BlockPos pos = hitResult.getBlockPos();
 
         if (stack.is(REPAIR_ITEMS) && player.isShiftKeyDown()) {
             if (mendAnvil(level, pos)) {

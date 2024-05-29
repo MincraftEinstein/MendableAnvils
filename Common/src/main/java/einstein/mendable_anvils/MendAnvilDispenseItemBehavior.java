@@ -16,7 +16,7 @@ public class MendAnvilDispenseItemBehavior extends OptionalDispenseItemBehavior 
         ServerLevel level = source.level();
         if (!level.isClientSide) {
             BlockPos pos = source.pos().relative(source.state().getValue(DispenserBlock.FACING));
-            setSuccess(MendableAnvilsCommon.mendAnvil(level, pos));
+            setSuccess(MendableAnvils.mendAnvil(level, pos));
             if (isSuccess()) {
                 stack.shrink(1);
                 level.playSound(null, pos, SoundEvents.ANVIL_LAND, SoundSource.BLOCKS, 1, 1);
