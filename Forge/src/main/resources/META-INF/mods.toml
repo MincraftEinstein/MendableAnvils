@@ -23,13 +23,13 @@ A mod that allows players to fix their anvils by shift + right-clicking an anvil
 [[dependencies.mendable_anvils]]
     modId="forge"
     mandatory=true
-    versionRange="[41.0.98,)"
+    versionRange="[41.1.0,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.mendable_anvils]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.20, 1.21)"
+    versionRange="[1.20.6]"
     ordering="NONE"
     side="BOTH"
