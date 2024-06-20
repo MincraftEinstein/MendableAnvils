@@ -25,5 +25,18 @@
     "fabric-api": "*",
     "minecraft": "${minecraft_version}",
     "java": ">=${java_version}"
+  },
+  "custom": {
+    "catalogue": {
+      "banner": "banner.png"
+    },
+    "modmenu": {
+      "links": {
+        "modmenu.modrinth": "https://modrinth.com/mod/mendable-anvils-fabric",
+        "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/mendable-anvils-fabric",
+        "modmenu.discord": "https://discord.gg/gSsaFAvrBM",
+        "modmenu.kofi": "https://ko-fi.com/mincrafteinstein"
+      }
+    }
   }
 }
