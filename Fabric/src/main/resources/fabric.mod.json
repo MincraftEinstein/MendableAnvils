@@ -3,7 +3,7 @@
   "id": "mendable_anvils",
   "version": "${version}",
   "name": "Mendable Anvils",
-  "description": "A mod that allows players to fix their anvils by shift + right-clicking an anvil with an iron ingot",
+  "description": "${description}",
   "authors": [
     "MincraftEinstein"
   ],
@@ -21,9 +21,9 @@
     ]
   },
   "depends": {
-    "fabricloader": ">=0.15",
+    "fabricloader": ">=${fabric_version}",
     "fabric-api": "*",
-    "minecraft": "1.20.6",
-    "java": ">=17"
+    "minecraft": "${minecraft_version}",
+    "java": ">=${java_version}"
   }
 }

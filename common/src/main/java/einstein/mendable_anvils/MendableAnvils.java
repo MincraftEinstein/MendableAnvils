@@ -67,7 +67,7 @@ public class MendableAnvils {
                     stack.shrink(1);
                 }
 
-                if (Services.PLATFORM.getPlatformName().equals("Forge")) {
+                if (Services.PLATFORM.isForgeLike()) {
                     player.swing(hand, true);
                 }
 

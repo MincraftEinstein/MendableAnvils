@@ -23,4 +23,11 @@ public interface IPlatformHelper {
      * @return True if in a development environment, false otherwise.
      */
     boolean isDevelopmentEnvironment();
+
+    /**
+     * Check if the mod loader neoforge or forge.
+     *
+     * @return True if the mod loader is forge or neoforge, false otherwise,
+     */
+    boolean isForgeLike();
 }
