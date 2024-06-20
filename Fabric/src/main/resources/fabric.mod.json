@@ -8,7 +8,7 @@
     "MincraftEinstein"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/mendable-anvils-fabric",
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/mendable-anvils",
     "sources": "https://github.com/MincraftEinstein/MendableAnvils",
     "issues": "https://github.com/MincraftEinstein/MendableAnvils/issues"
   },
@@ -32,8 +32,8 @@
     },
     "modmenu": {
       "links": {
-        "modmenu.modrinth": "https://modrinth.com/mod/mendable-anvils-fabric",
-        "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/mendable-anvils-fabric",
+        "modmenu.modrinth": "https://modrinth.com/mod/mendable-anvils",
+        "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/mendable-anvils",
         "modmenu.discord": "https://discord.gg/gSsaFAvrBM",
         "modmenu.kofi": "https://ko-fi.com/mincrafteinstein"
       }
