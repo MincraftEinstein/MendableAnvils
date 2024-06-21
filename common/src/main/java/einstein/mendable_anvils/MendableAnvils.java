@@ -35,7 +35,7 @@ public class MendableAnvils {
             Blocks.CHIPPED_ANVIL, Blocks.ANVIL,
             Blocks.DAMAGED_ANVIL, Blocks.CHIPPED_ANVIL
     );
-    private static final TagKey<Item> REPAIR_ITEMS = TagKey.create(Registries.ITEM, new ResourceLocation(MOD_ID, "anvil_repair_items"));
+    private static final TagKey<Item> REPAIR_ITEMS = TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(MOD_ID, "anvil_repair_items"));
 
     public static void init() {
     }
