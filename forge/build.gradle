@@ -9,6 +9,8 @@ minecraft {
 
     copyIdeResources = true
 
+    reobf = false
+
     runs {
         client {
             workingDirectory file('runs/client')
@@ -40,8 +42,6 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
 }
-
-jar.finalizedBy('reobfJar')
 
 sourceSets.each {
     def dir = layout.buildDirectory.dir("sourcesSets/$it.name")
