@@ -27,6 +27,6 @@ issueTrackerURL = "https://www.github.com/MincraftEinstein/MendableAnvils/issues
 [[dependencies.mendable_anvils]]
     modId = "minecraft"
     mandatory = true
-    versionRange = "${minecraft_version_range}"
+    versionRange = "[${minecraft_version}, ${max_minecraft_version})"
     ordering = "NONE"
     side = "SERVER"
