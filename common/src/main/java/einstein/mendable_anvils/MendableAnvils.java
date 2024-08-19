@@ -26,6 +26,8 @@ import org.apache.logging.log4j.Logger;
 
 import java.util.Map;
 
+import static net.minecraft.world.level.block.DispenserBlock.DISPENSER_REGISTRY;
+
 public class MendableAnvils {
 
     public static final String MOD_ID = "mendable_anvils";
@@ -42,16 +44,16 @@ public class MendableAnvils {
 
     public static void onDatapackSync() {
         // Clears the registry of mend anvil behaviors incase tags are different between single player worlds
-        Map<Item, DispenseItemBehavior> registry = Map.copyOf(DispenserBlock.DISPENSER_REGISTRY); // Copy of the registry so there are no issues caused by removing keys while looping
+        Map<Item, DispenseItemBehavior> registry = Map.copyOf(DISPENSER_REGISTRY); // Copy of the registry so there are no issues caused by removing keys while looping
         registry.forEach((item, behavior) -> {
             if (behavior instanceof MendAnvilDispenseItemBehavior) {
-                DispenserBlock.DISPENSER_REGISTRY.remove(item);
+                DISPENSER_REGISTRY.remove(item);
             }
         });
 
         BuiltInRegistries.ITEM.getTagOrEmpty(REPAIR_ITEMS).forEach(holder -> {
             Item item = holder.value();
-            if (!DispenserBlock.DISPENSER_REGISTRY.containsKey(item)) {
+            if (!DISPENSER_REGISTRY.containsKey(item)) {
                 DispenserBlock.registerBehavior(item, new MendAnvilDispenseItemBehavior());
             }
         });
