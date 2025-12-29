@@ -14,7 +14,7 @@ public class MendAnvilDispenseItemBehavior extends OptionalDispenseItemBehavior 
     @Override
     protected ItemStack execute(BlockSource source, ItemStack stack) {
         ServerLevel level = source.level();
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             BlockPos pos = source.pos().relative(source.state().getValue(DispenserBlock.FACING));
             setSuccess(MendableAnvils.mendAnvil(level, pos));
             if (isSuccess()) {
