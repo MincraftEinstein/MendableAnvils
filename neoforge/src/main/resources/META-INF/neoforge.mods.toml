@@ -9,7 +9,8 @@ issueTrackerURL = "https://www.github.com/MincraftEinstein/MendableAnvils/issues
     displayName = "${mod_name}"
     #updateJSONURL = "https://change.me.example.invalid/updates.json"
     displayURL = "https://www.curseforge.com/minecraft/mc-mods/mendable-anvils"
-    logoFile = "banner.png"
+    iconFile = "pack.png"
+    bannerFile = "banner.png"
     authors = "${mod_author}"
     description = "${description}"
 
